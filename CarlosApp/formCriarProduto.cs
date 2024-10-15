@@ -10,13 +10,13 @@ namespace CarlosApp
         public string Fabricante { get { return this.buttonFabricante.Text; } }
         public decimal PrecoCompra { get { return this.precoCompra.Value; } }
         public decimal PrecoVenda { get { return this.precoVenda.Value; } }
-        
-        
+
+
         public formCriarProduto()
         {
             InitializeComponent();
         }
-        
+
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -54,6 +54,11 @@ namespace CarlosApp
         {
             this.DialogResult = DialogResult.Cancel;
             this.Close();
+
+        }
+
+        private void formCriarProduto_Load(object sender, EventArgs e)
+        {
 
         }
     }

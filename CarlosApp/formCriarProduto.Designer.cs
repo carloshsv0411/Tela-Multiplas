@@ -62,22 +62,24 @@
             // 
             precoCompra.BorderStyle = BorderStyle.None;
             precoCompra.DecimalPlaces = 2;
+            precoCompra.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 162);
             precoCompra.Increment = new decimal(new int[] { 0, 0, 0, 131072 });
             precoCompra.Location = new Point(174, 95);
             precoCompra.Maximum = new decimal(new int[] { 1874919424, 2328306, 0, 0 });
             precoCompra.Name = "precoCompra";
-            precoCompra.Size = new Size(100, 19);
+            precoCompra.Size = new Size(100, 21);
             precoCompra.TabIndex = 2;
             precoCompra.TextAlign = HorizontalAlignment.Right;
             // 
             // precoVenda
             // 
             precoVenda.DecimalPlaces = 2;
+            precoVenda.Font = new Font("Segoe UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 162);
             precoVenda.Increment = new decimal(new int[] { 0, 0, 0, 131072 });
             precoVenda.Location = new Point(174, 120);
             precoVenda.Maximum = new decimal(new int[] { 1569325056, 23283064, 0, 0 });
             precoVenda.Name = "precoVenda";
-            precoVenda.Size = new Size(100, 23);
+            precoVenda.Size = new Size(100, 25);
             precoVenda.TabIndex = 3;
             precoVenda.TextAlign = HorizontalAlignment.Right;
             // 
@@ -161,7 +163,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             BackgroundImage = Properties.Resources.Confluentes1;
-            ClientSize = new Size(284, 193);
+            ClientSize = new Size(661, 481);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);
             Controls.Add(labelPrecodeVenda);
@@ -174,6 +176,7 @@
             Controls.Add(Frabricante);
             Name = "formCriarProduto";
             Text = "formCriarProduto";
+            Load += formCriarProduto_Load;
             ((System.ComponentModel.ISupportInitialize)precoCompra).EndInit();
             ((System.ComponentModel.ISupportInitialize)precoVenda).EndInit();
             ResumeLayout(false);
