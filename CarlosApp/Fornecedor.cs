@@ -10,10 +10,10 @@ namespace CarlosApp
     public class Fornecedor
     {
         [DisplayName("Id")] public int Id { get; set; }
-        [DisplayName("Nome do Fornecedor")] public string nome { get; set; }
-        [DisplayName("Número de Telefone")] public string fone { get; set; }
-        [DisplayName("Endereço de E-mail")] public string email { get; set; }
-        [DisplayName("Endereço de Físico")] public string endereço { get; set; }
+        [DisplayName("Empresa")] public string nomeDaEmpresa { get; set; }
+        [DisplayName("Telefone")] public string CNPJ { get; set; }
+        [DisplayName("E-mail ")] public string emaill { get; set; }
+        [DisplayName("Endereço da Empresa")] public string endereço { get; set; }
 
 
     }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCriarProduto));
             Frabricante = new TextBox();
             nomeProduto = new TextBox();
             precoCompra = new NumericUpDown();
@@ -88,7 +89,7 @@
             labelNomedoProduto.AutoSize = true;
             labelNomedoProduto.BackColor = Color.Transparent;
             labelNomedoProduto.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelNomedoProduto.ForeColor = Color.White;
+            labelNomedoProduto.ForeColor = Color.Black;
             labelNomedoProduto.Location = new Point(22, 13);
             labelNomedoProduto.Name = "labelNomedoProduto";
             labelNomedoProduto.Size = new Size(125, 19);
@@ -101,7 +102,7 @@
             buttonFabricante.AutoSize = true;
             buttonFabricante.BackColor = Color.Transparent;
             buttonFabricante.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonFabricante.ForeColor = Color.White;
+            buttonFabricante.ForeColor = Color.Black;
             buttonFabricante.Location = new Point(22, 50);
             buttonFabricante.Name = "buttonFabricante";
             buttonFabricante.Size = new Size(80, 19);
@@ -113,7 +114,7 @@
             labelPrecoDeCompra.AutoSize = true;
             labelPrecoDeCompra.BackColor = Color.Transparent;
             labelPrecoDeCompra.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPrecoDeCompra.ForeColor = Color.White;
+            labelPrecoDeCompra.ForeColor = Color.Black;
             labelPrecoDeCompra.Location = new Point(22, 95);
             labelPrecoDeCompra.Name = "labelPrecoDeCompra";
             labelPrecoDeCompra.Size = new Size(124, 19);
@@ -126,7 +127,7 @@
             labelPrecodeVenda.AutoSize = true;
             labelPrecodeVenda.BackColor = Color.Transparent;
             labelPrecodeVenda.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelPrecodeVenda.ForeColor = Color.White;
+            labelPrecodeVenda.ForeColor = Color.Black;
             labelPrecodeVenda.Location = new Point(22, 120);
             labelPrecodeVenda.Name = "labelPrecodeVenda";
             labelPrecodeVenda.Size = new Size(113, 19);
@@ -137,7 +138,7 @@
             // buttonOk
             // 
             buttonOk.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            buttonOk.Location = new Point(184, 151);
+            buttonOk.Location = new Point(225, 160);
             buttonOk.Name = "buttonOk";
             buttonOk.Size = new Size(49, 30);
             buttonOk.TabIndex = 8;
@@ -149,7 +150,7 @@
             // 
             buttonCancel.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
             buttonCancel.ForeColor = SystemColors.ControlText;
-            buttonCancel.Location = new Point(22, 151);
+            buttonCancel.Location = new Point(22, 160);
             buttonCancel.Name = "buttonCancel";
             buttonCancel.Size = new Size(65, 30);
             buttonCancel.TabIndex = 9;
@@ -162,7 +163,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            BackgroundImage = Properties.Resources.Confluentes1;
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(661, 481);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);

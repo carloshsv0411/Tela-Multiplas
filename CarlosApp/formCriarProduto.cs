@@ -6,7 +6,7 @@ namespace CarlosApp
 {
     public partial class formCriarProduto : Form
     {
-        public string NomeProduto { get { return this.nomeProduto.Text; } }
+        public string Produto { get { return this.nomeProduto.Text; } }
         public string Fabricante { get { return this.buttonFabricante.Text; } }
         public decimal PrecoCompra { get { return this.precoCompra.Value; } }
         public decimal PrecoVenda { get { return this.precoVenda.Value; } }

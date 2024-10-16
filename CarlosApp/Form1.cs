@@ -7,8 +7,8 @@ namespace CarlosApp
     {
         public BindingList<Produto> produtos { get; set; }
         public BindingList<Cliente> clientes { get; set; }
-|       public BindingList<Fornecedor> fornecedores { get; set; }
-|       public BindingList<Compra> Compras { get; set; }
+        public BindingList<Fornecedor> fornecedores { get; set; }
+        public BindingList<Compra> Compras { get; set; }
         public BindingList<Venda> Vendas { get; set; }
         public Form1()
         {
@@ -19,6 +19,10 @@ namespace CarlosApp
             Compras = new BindingList<Compra>();
             Vendas = new BindingList<Venda>();
             this.dataGridView1.DataSource = produtos;
+            this.dataGridView1.DataSource = clientes;
+            this.dataGridView1.DataSource = fornecedores;
+            this.dataGridView1.DataSource = Compras;
+            this.dataGridView1.DataSource = Vendas;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -32,7 +36,7 @@ namespace CarlosApp
                 if (produtos.Count == 0) produto.Id = 1;
                 else produto.Id = produtos.Max(x => x.Id) + 1;
 
-                produto.Nome = fcp.NomeProduto;
+                produto.produto = fcp.Produto;
                 produto.Fabricante = fcp.Fabricante;
                 produto.PrecoCompra = fcp.PrecoCompra;
                 produto.PrecoVenda = fcp.PrecoVenda;
@@ -57,8 +61,23 @@ namespace CarlosApp
             this.dataGridView1.DataSource = produtos;
         }
 
-        private void button1_Click_2(object sender, EventArgs e)
+        private void buttonAdicionarCliente_Click(object sender, EventArgs e)
         {
+            CadastrarClientes clt = new CadastrarClientes();
+            var resultado = clt.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Cliente cliente = new Cliente();
+
+                if (clientes.Count == 0) cliente.Id = 1;
+                else cliente.Id = clientes.Max(x => x.Id) + 1;
+
+                cliente.nome = clt.Cliente;
+                cliente.fone = clt.Telefone;
+                cliente.endereco = clt.Endereço;
+                cliente.email = clt.Email;
+                clientes.Add(cliente);
+            }
         }
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -67,57 +86,21 @@ namespace CarlosApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.dataGridView1.DataSource = fornecedores;
+        }
+        private void buttonCompra_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = Compras;
+        }
 
+        private void buttonVendas_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = Vendas;
         }
 
         private void buttonClientes_Click(object sender, EventArgs e)
         {
             this.dataGridView1.DataSource = clientes;
-        }
-
-        private void buttonCompra_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void buttonVendas_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button8_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
