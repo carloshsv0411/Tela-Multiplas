@@ -13,12 +13,24 @@ namespace CarlosApp
     public partial class CadastrarClientes : Form
     {
         public string Cliente { get { return this.textBoxNomeCliente.Text; } }
-        public string Endereço {
-            get 
+        public string Endereço
+        {
+            get
             {
-                string endereco = "";
-                return this.textBoxEndreco.Text; } }
-        public string Telefone { get{  return this.textBoxTelefone.Text; }
+                string endereco = $"";
+                endereco += $"({textBoxLogadouro.Text}), ";
+                endereco += $"({textBoxNumeroRua.Text}), ";
+                endereco += $"({textBoxUF.Text}), ";
+                endereco += $"({textBoxCidade.Text}), ";
+                endereco += $"({textBoxComplemento.Text}), ";
+                endereco += $"({textBoxCEP.Text}), ";
+                return endereco;
+            }
+        }
+
+        public string Telefone
+        {
+            get { return this.textBoxTelefone.Text; }
         }
         public string Email { get { return this.textBoxEmail.Text; } }
 
@@ -46,3 +58,4 @@ namespace CarlosApp
         }
 
     }
+}

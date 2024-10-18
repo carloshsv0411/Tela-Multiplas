@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic.Logging;
 using System.ComponentModel;
+using System.Windows.Forms.Design;
 
 namespace CarlosApp
 {
@@ -83,11 +84,6 @@ namespace CarlosApp
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            this.dataGridView1.DataSource = fornecedores;
-        }
         private void buttonCompra_Click(object sender, EventArgs e)
         {
             this.dataGridView1.DataSource = Compras;
@@ -101,6 +97,85 @@ namespace CarlosApp
         private void buttonClientes_Click(object sender, EventArgs e)
         {
             this.dataGridView1.DataSource = clientes;
+        }
+
+        private void buttonFornecedores_Click(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = fornecedores;
+        }
+
+        private void buttonRemoverClientes_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                clientes.RemoveAt(dataGridView1.SelectedRows.Count - 1);
+            }
+        }
+
+        private void buttonAdicionarF_Click(object sender, EventArgs e)
+        {
+            FormCadastrarFornecedores fnc = new FormCadastrarFornecedores();
+            var resultado = fnc.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Fornecedor fornecedor = new Fornecedor();
+
+                if (fornecedores.Count == 0) fornecedor.Id = 1;
+                else fornecedor.Id = fornecedores.Max(x => x.Id) + 1;
+
+                fornecedor.nomeDaEmpresa = fnc.NomeEmpresa;
+                fornecedor.nomeDaEmpresa = fnc.NomeparaContato;
+                fornecedor.fone = fnc.Telefone;
+                fornecedor.CNPJ = fnc.CNPJ;
+                fornecedor.endereço = fnc.Endereco;
+                fornecedor.emaill = fnc.emaill;
+                fornecedores.Add(fornecedor);
+            }
+        }
+
+        private void buttonRemoverF_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                fornecedores.RemoveAt(dataGridView1.SelectedRows.Count - 1);
+            }
+        }
+
+        private void buttonAdicionarC_Click(object sender, EventArgs e)
+        {
+            if (fornecedores.Count == 0)
+            {
+                MessageBox.Show("Você Precisa Cadastrar um Fornecedor antes de efetuar a compra.");
+                return;
+            }
+
+            if (produtos.Count == 0)
+            {
+                MessageBox.Show("Você Precisa Cadastrar um Produto  antes efetuar uma compra");
+                return;
+            }
+            FromCriarCompra fcc = new FromCriarCompra(fornecedores, produtos);
+            var resultado = fcc.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                Compra compra = new Compra();
+                if (Compras.Count == 0) compra.idProduto = 1;
+                else compra.idProduto = Compras.Max(x => x.idProduto) + 1;
+
+                compra.idProduto = fcc.IdProdutos;
+                compra.idFornecedor = fcc.IdFornecedor;
+                compra.quantidade = (int)fcc.Quantidade;
+                compra.desconto = fcc.Desconto;
+                compra.dataCompra = DateTime.Now;
+            }
+        }
+
+        private void buttonRemoverC_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                Compras.RemoveAt(dataGridView1.SelectedRows.Count - 1);
+            }
         }
     }
 }

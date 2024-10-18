@@ -35,22 +35,21 @@
             labelNome = new Label();
             labelTelefone = new Label();
             labelEmail = new Label();
-            labelEndereço = new Label();
             buttonAdicionar = new Button();
             buttonCancel = new Button();
             groupBoxEndereco = new GroupBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
+            textBoxUF = new TextBox();
+            textBoxCidade = new TextBox();
+            textBoxComplemento = new TextBox();
+            textBoxCEP = new TextBox();
+            textBoxNumeroRua = new TextBox();
             labelCEP = new Label();
             labelNumero = new Label();
             labelEstado = new Label();
             labelCidade = new Label();
             labelComplemento = new Label();
-            textBox1 = new TextBox();
+            textBoxLogadouro = new TextBox();
             labelLogadouro = new Label();
-            textBox5 = new TextBox();
-            textBox6 = new TextBox();
             groupBoxEndereco.SuspendLayout();
             SuspendLayout();
             // 
@@ -102,15 +101,6 @@
             labelEmail.TabIndex = 6;
             labelEmail.Text = "E-mail:";
             // 
-            // labelEndereço
-            // 
-            labelEndereço.AutoSize = true;
-            labelEndereço.Location = new Point(137, 148);
-            labelEndereço.Name = "labelEndereço";
-            labelEndereço.Size = new Size(59, 15);
-            labelEndereço.TabIndex = 7;
-            labelEndereço.Text = "Endereço:";
-            // 
             // buttonAdicionar
             // 
             buttonAdicionar.Location = new Point(137, 414);
@@ -134,45 +124,59 @@
             // groupBoxEndereco
             // 
             groupBoxEndereco.BackColor = SystemColors.ActiveCaption;
-            groupBoxEndereco.Controls.Add(textBox6);
-            groupBoxEndereco.Controls.Add(textBox5);
-            groupBoxEndereco.Controls.Add(textBox4);
-            groupBoxEndereco.Controls.Add(textBox3);
-            groupBoxEndereco.Controls.Add(textBox2);
+            groupBoxEndereco.Controls.Add(textBoxUF);
+            groupBoxEndereco.Controls.Add(textBoxCidade);
+            groupBoxEndereco.Controls.Add(textBoxComplemento);
+            groupBoxEndereco.Controls.Add(textBoxCEP);
+            groupBoxEndereco.Controls.Add(textBoxNumeroRua);
             groupBoxEndereco.Controls.Add(labelCEP);
             groupBoxEndereco.Controls.Add(labelNumero);
             groupBoxEndereco.Controls.Add(labelEstado);
             groupBoxEndereco.Controls.Add(labelCidade);
             groupBoxEndereco.Controls.Add(labelComplemento);
-            groupBoxEndereco.Controls.Add(textBox1);
+            groupBoxEndereco.Controls.Add(textBoxLogadouro);
             groupBoxEndereco.Controls.Add(labelLogadouro);
             groupBoxEndereco.Location = new Point(137, 166);
             groupBoxEndereco.Name = "groupBoxEndereco";
             groupBoxEndereco.Size = new Size(293, 242);
             groupBoxEndereco.TabIndex = 10;
             groupBoxEndereco.TabStop = false;
-            groupBoxEndereco.Text = "groupBox1";
+            groupBoxEndereco.Text = "Endereço:";
             // 
-            // textBox4
+            // textBoxUF
             // 
-            textBox4.Location = new Point(124, 120);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(114, 23);
-            textBox4.TabIndex = 9;
+            textBoxUF.Location = new Point(124, 199);
+            textBoxUF.Name = "textBoxUF";
+            textBoxUF.Size = new Size(113, 23);
+            textBoxUF.TabIndex = 11;
             // 
-            // textBox3
+            // textBoxCidade
             // 
-            textBox3.Location = new Point(124, 83);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(114, 23);
-            textBox3.TabIndex = 8;
+            textBoxCidade.Location = new Point(124, 160);
+            textBoxCidade.Name = "textBoxCidade";
+            textBoxCidade.Size = new Size(113, 23);
+            textBoxCidade.TabIndex = 10;
             // 
-            // textBox2
+            // textBoxComplemento
             // 
-            textBox2.Location = new Point(123, 48);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(115, 23);
-            textBox2.TabIndex = 7;
+            textBoxComplemento.Location = new Point(124, 120);
+            textBoxComplemento.Name = "textBoxComplemento";
+            textBoxComplemento.Size = new Size(114, 23);
+            textBoxComplemento.TabIndex = 9;
+            // 
+            // textBoxCEP
+            // 
+            textBoxCEP.Location = new Point(124, 83);
+            textBoxCEP.Name = "textBoxCEP";
+            textBoxCEP.Size = new Size(114, 23);
+            textBoxCEP.TabIndex = 8;
+            // 
+            // textBoxNumeroRua
+            // 
+            textBoxNumeroRua.Location = new Point(123, 48);
+            textBoxNumeroRua.Name = "textBoxNumeroRua";
+            textBoxNumeroRua.Size = new Size(115, 23);
+            textBoxNumeroRua.TabIndex = 7;
             // 
             // labelCEP
             // 
@@ -219,12 +223,13 @@
             labelComplemento.TabIndex = 2;
             labelComplemento.Text = "Complemento:";
             // 
-            // textBox1
+            // textBoxLogadouro
             // 
-            textBox1.Location = new Point(123, 19);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(115, 23);
-            textBox1.TabIndex = 1;
+            textBoxLogadouro.HideSelection = false;
+            textBoxLogadouro.Location = new Point(123, 19);
+            textBoxLogadouro.Name = "textBoxLogadouro";
+            textBoxLogadouro.Size = new Size(115, 23);
+            textBoxLogadouro.TabIndex = 1;
             // 
             // labelLogadouro
             // 
@@ -235,20 +240,6 @@
             labelLogadouro.TabIndex = 0;
             labelLogadouro.Text = "Logadouro (Rua):";
             // 
-            // textBox5
-            // 
-            textBox5.Location = new Point(124, 160);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(113, 23);
-            textBox5.TabIndex = 10;
-            // 
-            // textBox6
-            // 
-            textBox6.Location = new Point(124, 199);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(113, 23);
-            textBox6.TabIndex = 11;
-            // 
             // CadastrarClientes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -256,7 +247,6 @@
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(453, 450);
             Controls.Add(groupBoxEndereco);
-            Controls.Add(labelEndereço);
             Controls.Add(buttonCancel);
             Controls.Add(buttonAdicionar);
             Controls.Add(labelEmail);
@@ -283,21 +273,20 @@
         private Label labelNome;
         private Label labelTelefone;
         private Label labelEmail;
-        private Label labelEndereço;
         private Button buttonAdicionar;
         private Button buttonCancel;
         private GroupBox groupBoxEndereco;
         private Label labelLogadouro;
-        private TextBox textBox1;
+        private TextBox textBoxLogadouro;
         private Label labelNumero;
         private Label labelEstado;
         private Label labelCidade;
         private Label labelComplemento;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
+        private TextBox textBoxComplemento;
+        private TextBox textBoxCEP;
+        private TextBox textBoxNumeroRua;
         private Label labelCEP;
-        private TextBox textBox6;
-        private TextBox textBox5;
+        private TextBox textBoxUF;
+        private TextBox textBoxCidade;
     }
 }

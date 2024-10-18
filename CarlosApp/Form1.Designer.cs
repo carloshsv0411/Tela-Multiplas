@@ -36,13 +36,13 @@
             buttonClientes = new Button();
             buttonFornecedores = new Button();
             buttonAdicionarCliente = new Button();
-            button2 = new Button();
-            button3 = new Button();
-            button4 = new Button();
-            button5 = new Button();
-            button6 = new Button();
-            button7 = new Button();
-            button8 = new Button();
+            buttonAdicionarF = new Button();
+            buttonAdicionarC = new Button();
+            buttonAdicionarV = new Button();
+            buttonRemoverClientes = new Button();
+            buttonRemoverF = new Button();
+            buttonRemoverC = new Button();
+            buttonRemoverV = new Button();
             buttonCompra = new Button();
             buttonVendas = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -127,6 +127,7 @@
             buttonFornecedores.Text = "Fornecedores";
             buttonFornecedores.TextAlign = ContentAlignment.MiddleRight;
             buttonFornecedores.UseVisualStyleBackColor = false;
+            buttonFornecedores.Click += buttonFornecedores_Click;
             // 
             // buttonAdicionarCliente
             // 
@@ -142,89 +143,94 @@
             buttonAdicionarCliente.UseVisualStyleBackColor = false;
             buttonAdicionarCliente.Click += buttonAdicionarCliente_Click;
             // 
-            // button2
+            // buttonAdicionarF
             // 
-            button2.BackColor = Color.Lime;
-            button2.BackgroundImageLayout = ImageLayout.Center;
-            button2.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button2.ForeColor = SystemColors.ControlText;
-            button2.Location = new Point(242, 61);
-            button2.Name = "button2";
-            button2.Size = new Size(121, 23);
-            button2.TabIndex = 7;
-            button2.Text = "Adicionar";
-            button2.UseVisualStyleBackColor = false;
+            buttonAdicionarF.BackColor = Color.Lime;
+            buttonAdicionarF.BackgroundImageLayout = ImageLayout.Center;
+            buttonAdicionarF.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonAdicionarF.ForeColor = SystemColors.ControlText;
+            buttonAdicionarF.Location = new Point(242, 61);
+            buttonAdicionarF.Name = "buttonAdicionarF";
+            buttonAdicionarF.Size = new Size(121, 23);
+            buttonAdicionarF.TabIndex = 7;
+            buttonAdicionarF.Text = "Adicionar";
+            buttonAdicionarF.UseVisualStyleBackColor = false;
+            buttonAdicionarF.Click += buttonAdicionarF_Click;
             // 
-            // button3
+            // buttonAdicionarC
             // 
-            button3.BackColor = Color.Lime;
-            button3.BackgroundImageLayout = ImageLayout.Center;
-            button3.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button3.ForeColor = SystemColors.ControlText;
-            button3.Location = new Point(369, 61);
-            button3.Name = "button3";
-            button3.Size = new Size(106, 23);
-            button3.TabIndex = 8;
-            button3.Text = "Adicionar";
-            button3.UseVisualStyleBackColor = false;
+            buttonAdicionarC.BackColor = Color.Lime;
+            buttonAdicionarC.BackgroundImageLayout = ImageLayout.Center;
+            buttonAdicionarC.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonAdicionarC.ForeColor = SystemColors.ControlText;
+            buttonAdicionarC.Location = new Point(369, 61);
+            buttonAdicionarC.Name = "buttonAdicionarC";
+            buttonAdicionarC.Size = new Size(106, 23);
+            buttonAdicionarC.TabIndex = 8;
+            buttonAdicionarC.Text = "Adicionar";
+            buttonAdicionarC.UseVisualStyleBackColor = false;
+            buttonAdicionarC.Click += buttonAdicionarC_Click;
             // 
-            // button4
+            // buttonAdicionarV
             // 
-            button4.BackColor = Color.Lime;
-            button4.BackgroundImageLayout = ImageLayout.Center;
-            button4.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button4.ForeColor = SystemColors.ControlText;
-            button4.Location = new Point(495, 61);
-            button4.Name = "button4";
-            button4.Size = new Size(102, 23);
-            button4.TabIndex = 9;
-            button4.Text = "Adicionar";
-            button4.UseVisualStyleBackColor = false;
+            buttonAdicionarV.BackColor = Color.Lime;
+            buttonAdicionarV.BackgroundImageLayout = ImageLayout.Center;
+            buttonAdicionarV.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonAdicionarV.ForeColor = SystemColors.ControlText;
+            buttonAdicionarV.Location = new Point(495, 61);
+            buttonAdicionarV.Name = "buttonAdicionarV";
+            buttonAdicionarV.Size = new Size(102, 23);
+            buttonAdicionarV.TabIndex = 9;
+            buttonAdicionarV.Text = "Adicionar";
+            buttonAdicionarV.UseVisualStyleBackColor = false;
             // 
-            // button5
+            // buttonRemoverClientes
             // 
-            button5.BackColor = Color.FromArgb(255, 128, 128);
-            button5.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button5.Location = new Point(130, 90);
-            button5.Name = "button5";
-            button5.Size = new Size(106, 23);
-            button5.TabIndex = 10;
-            button5.Text = "Remover";
-            button5.UseVisualStyleBackColor = false;
+            buttonRemoverClientes.BackColor = Color.FromArgb(255, 128, 128);
+            buttonRemoverClientes.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonRemoverClientes.Location = new Point(130, 90);
+            buttonRemoverClientes.Name = "buttonRemoverClientes";
+            buttonRemoverClientes.Size = new Size(106, 23);
+            buttonRemoverClientes.TabIndex = 10;
+            buttonRemoverClientes.Text = "Remover";
+            buttonRemoverClientes.UseVisualStyleBackColor = false;
+            buttonRemoverClientes.Click += buttonRemoverClientes_Click;
             // 
-            // button6
+            // buttonRemoverF
             // 
-            button6.BackColor = Color.FromArgb(255, 128, 128);
-            button6.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button6.Location = new Point(242, 90);
-            button6.Name = "button6";
-            button6.Size = new Size(121, 23);
-            button6.TabIndex = 11;
-            button6.Text = "Remover";
-            button6.UseVisualStyleBackColor = false;
+            buttonRemoverF.BackColor = Color.FromArgb(255, 128, 128);
+            buttonRemoverF.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonRemoverF.Location = new Point(242, 90);
+            buttonRemoverF.Name = "buttonRemoverF";
+            buttonRemoverF.Size = new Size(121, 23);
+            buttonRemoverF.TabIndex = 11;
+            buttonRemoverF.Text = "Remover";
+            buttonRemoverF.UseVisualStyleBackColor = false;
+            buttonRemoverF.Click += buttonRemoverF_Click;
             // 
-            // button7
+            // buttonRemoverC
             // 
-            button7.BackColor = Color.FromArgb(255, 128, 128);
-            button7.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button7.Location = new Point(369, 90);
-            button7.Name = "button7";
-            button7.Size = new Size(106, 23);
-            button7.TabIndex = 12;
-            button7.Text = "Remover";
-            button7.UseVisualStyleBackColor = false;
+            buttonRemoverC.BackColor = Color.FromArgb(255, 128, 128);
+            buttonRemoverC.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonRemoverC.Location = new Point(369, 90);
+            buttonRemoverC.Name = "buttonRemoverC";
+            buttonRemoverC.Size = new Size(106, 23);
+            buttonRemoverC.TabIndex = 12;
+            buttonRemoverC.Text = "Remover";
+            buttonRemoverC.UseVisualStyleBackColor = false;
+            buttonRemoverC.Click += buttonRemoverC_Click;
             // 
-            // button8
+            // buttonRemoverV
             // 
-            button8.BackColor = Color.FromArgb(255, 128, 128);
-            button8.BackgroundImageLayout = ImageLayout.Zoom;
-            button8.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
-            button8.Location = new Point(495, 86);
-            button8.Name = "button8";
-            button8.Size = new Size(102, 23);
-            button8.TabIndex = 13;
-            button8.Text = "Remover";
-            button8.UseVisualStyleBackColor = false;
+            buttonRemoverV.BackColor = Color.FromArgb(255, 128, 128);
+            buttonRemoverV.BackgroundImageLayout = ImageLayout.Zoom;
+            buttonRemoverV.Font = new Font("Tahoma", 9F, FontStyle.Bold | FontStyle.Italic, GraphicsUnit.Point, 0);
+            buttonRemoverV.Location = new Point(495, 86);
+            buttonRemoverV.Name = "buttonRemoverV";
+            buttonRemoverV.Size = new Size(102, 23);
+            buttonRemoverV.TabIndex = 13;
+            buttonRemoverV.Text = "Remover";
+            buttonRemoverV.UseVisualStyleBackColor = false;
             // 
             // buttonCompra
             // 
@@ -263,13 +269,13 @@
             ClientSize = new Size(947, 529);
             Controls.Add(buttonVendas);
             Controls.Add(buttonCompra);
-            Controls.Add(button8);
-            Controls.Add(button7);
-            Controls.Add(button6);
-            Controls.Add(button5);
-            Controls.Add(button4);
-            Controls.Add(button3);
-            Controls.Add(button2);
+            Controls.Add(buttonRemoverV);
+            Controls.Add(buttonRemoverC);
+            Controls.Add(buttonRemoverF);
+            Controls.Add(buttonRemoverClientes);
+            Controls.Add(buttonAdicionarV);
+            Controls.Add(buttonAdicionarC);
+            Controls.Add(buttonAdicionarF);
             Controls.Add(buttonAdicionarCliente);
             Controls.Add(buttonFornecedores);
             Controls.Add(buttonClientes);
@@ -293,13 +299,13 @@
         private Button buttonClientes;
         private Button buttonFornecedores;
         private Button buttonAdicionarCliente;
-        private Button button2;
-        private Button button3;
-        private Button button4;
-        private Button button5;
-        private Button button6;
-        private Button button7;
-        private Button button8;
+        private Button buttonAdicionarF;
+        private Button buttonAdicionarC;
+        private Button buttonAdicionarV;
+        private Button buttonRemoverClientes;
+        private Button buttonRemoverF;
+        private Button buttonRemoverC;
+        private Button buttonRemoverV;
         private Button buttonCompra;
         private Button buttonVendas;
     }

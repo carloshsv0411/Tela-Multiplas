@@ -11,8 +11,9 @@ namespace CarlosApp
     {
         [DisplayName("Id")] public int Id { get; set; }
         [DisplayName("Empresa")] public string nomeDaEmpresa { get; set; }
-        [DisplayName("Telefone")] public string CNPJ { get; set; }
+        [DisplayName("CNPJ")] public string CNPJ { get; set; }
         [DisplayName("E-mail ")] public string emaill { get; set; }
+        [DisplayName(" Telefone ")] public string fone { get; set; }
         [DisplayName("Endereço da Empresa")] public string endereço { get; set; }
 
 
