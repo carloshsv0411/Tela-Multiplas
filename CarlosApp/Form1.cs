@@ -84,10 +84,6 @@ namespace CarlosApp
         {
 
         }
-        private void buttonCompra_Click(object sender, EventArgs e)
-        {
-            this.dataGridView1.DataSource = Compras;
-        }
 
         private void buttonVendas_Click(object sender, EventArgs e)
         {
@@ -159,14 +155,15 @@ namespace CarlosApp
             if (resultado == DialogResult.OK)
             {
                 Compra compra = new Compra();
-                if (Compras.Count == 0) compra.idProduto = 1;
-                else compra.idProduto = Compras.Max(x => x.idProduto) + 1;
+                if (Compras.Count == 0) compra.Id = 1;
+                else compra.Id = Compras.Max(x => x.Id) + 1;
 
                 compra.idProduto = fcc.IdProdutos;
                 compra.idFornecedor = fcc.IdFornecedor;
                 compra.quantidade = (int)fcc.Quantidade;
                 compra.desconto = fcc.Desconto;
                 compra.dataCompra = DateTime.Now;
+                Compras.Add(compra);
             }
         }
 
@@ -176,6 +173,11 @@ namespace CarlosApp
             {
                 Compras.RemoveAt(dataGridView1.SelectedRows.Count - 1);
             }
+        }
+
+        private void buttonCompra_Click_1(object sender, EventArgs e)
+        {
+            this.dataGridView1.DataSource = Compras;
         }
     }
 }

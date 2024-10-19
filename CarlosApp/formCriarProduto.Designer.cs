@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formCriarProduto));
             Frabricante = new TextBox();
             nomeProduto = new TextBox();
             precoCompra = new NumericUpDown();
@@ -163,7 +162,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            BackgroundImage = Properties.Resources.images__3_;
             ClientSize = new Size(661, 481);
             Controls.Add(buttonCancel);
             Controls.Add(buttonOk);

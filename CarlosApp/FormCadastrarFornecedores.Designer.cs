@@ -151,6 +151,8 @@
             // 
             // Endereço
             // 
+            Endereço.BackgroundImage = Properties.Resources.brasil;
+            Endereço.BackgroundImageLayout = ImageLayout.None;
             Endereço.Controls.Add(textBoxCEPf);
             Endereço.Controls.Add(textBoxNumeroFornece);
             Endereço.Controls.Add(textBoxEstadoF);
@@ -163,6 +165,7 @@
             Endereço.Controls.Add(label6);
             Endereço.Controls.Add(label7);
             Endereço.Controls.Add(label8);
+            Endereço.FlatStyle = FlatStyle.Popup;
             Endereço.Location = new Point(68, 195);
             Endereço.Name = "Endereço";
             Endereço.Size = new Size(273, 233);
@@ -277,7 +280,9 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 477);
+            BackgroundImage = Properties.Resources.brasil;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(387, 477);
             Controls.Add(textBoxEmailF);
             Controls.Add(Endereço);
             Controls.Add(label5);
